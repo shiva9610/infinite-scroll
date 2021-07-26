@@ -1,0 +1,23 @@
+<div
+  class="search-results"
+  infinite-scroll
+  [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollUpDistance]="scrollUpDistance"
+  [infiniteScrollThrottle]="throttle"
+  (scrolled)="onScrollDown($event)"
+>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Random</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of array">
+        <td>{{ i.id }}</td>
+        <td>{{ i.word }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
